@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <script src="./js/bundle.js"></script>
+  </head>
+  <body>
+    <div id="app">
+      <h2>Total population:{{ totalPopulation }}</h2>
+
+      <select v-model:selected="selectedCountry">
+        <option v-for="country in countries" v-bind:value="country">{{country.name}} </option>
+      <option value=""></option>
+      </select>
+
+      <h2> {{selectedCountry.name}} </h2>
+      <img :src="selectedCountry.flag" >
+
+
+      <!-- <form v-on:submit.prevent="saveFavCountry">
+           <label for="fav-country-input">Add your favourite country:</label>
+           <input type="text" id="country-input" v-model="newCountry.name" />
+      </form> -->
+      </div>
+
+  </body>
+</html>
